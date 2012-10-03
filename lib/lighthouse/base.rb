@@ -1,5 +1,7 @@
 module Lighthouse
   class Base < ActiveResource::Base
+    self.format = :xml
+
     def self.inherited(base)
       Lighthouse.resources << base
       class << base        
